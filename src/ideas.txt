@@ -1,0 +1,2 @@
+# If user login, they login. They see their own group and other groups where they have guest guest access.
+
