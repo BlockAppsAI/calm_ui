@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+// styled components
+import styled from "styled-components";
+
+//components
+import NavBar from "./NavBar";
+import Projects from "./Projects";
+
+const MainContainer = styled.div`
+  min-height: 100vh;
+  background-color: ${props => props.theme.colors.grey100};
+`;
+
+const MainBody = styled.div`
+  min-height: 100vh;
+  color: ${props => props.theme.colors.black};
+  padding: 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      <NavBar/>
+      <MainBody>
+        <Projects title="Your Projects"/>
+      </MainBody>
+    </MainContainer>
   );
 }
 
